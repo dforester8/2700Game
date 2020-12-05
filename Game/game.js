@@ -190,7 +190,7 @@ function createEnemies() {
 		y: Math.sin(angle)
 	} */
 		enemies.push(randomEnemy());
-	}, 1100)
+	}, 1500)
 }
 
 //const stinger = new Stinger(jacket.x + 38, jacket.y + 70, 5, 'red', {x: 1, y: 1})
