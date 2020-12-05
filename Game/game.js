@@ -59,14 +59,7 @@ class Enemy {
 
 	}
 
-	/*draw() {
-		var ctx = document.getElementById('canvas').getContext('2d');
-		var img = new Image();
-		img.onload = function() {
-			ctx.drawImage(img, x, y, 40, 40);
-		}
-		img.src = 'Game/jacket.png';
-	}*/
+	
 	update() {
 		this.draw();
 		this.x = this.x + this.velocity.x;
@@ -120,12 +113,7 @@ class Bulldog extends Enemy {
 		ctx.drawImage(img, this.x, this.y);
 		
 	}
-	/*update() {
-		this.draw();
-		this.x = this.x + this.velocity.x;
-		this.y = this.y + this.velocity.y;
-	}
-	*/
+	
 }
 
 const x = canvas.width / 2
@@ -174,26 +162,11 @@ function randomEnemy() {
 	
 function createEnemies() {
 	setInterval(() => {
-		/*let x
-		let y
-		if (Math.random() < 0.5) {
-		 x = (Math.random() < 0.5) ? 0 - 30 : canvas.width + 30
-		 y = Math.random() * canvas.height
-	} else {
-		x = Math.random() * canvas.width
-		y = (Math.random() < 0.5) ? 0 - 30 : canvas.height + 30
-	}
-		console.log('x ' + x + ', y ' + y)
-		const angle = Math.atan2(canvas.height / 2 - y, canvas.width / 2 - x);
-		const velocity = {
-		x: Math.cos(angle),
-		y: Math.sin(angle)
-	} */
+		
 		enemies.push(randomEnemy());
 	}, 1500)
 }
 
-//const stinger = new Stinger(jacket.x + 38, jacket.y + 70, 5, 'red', {x: 1, y: 1})
 
 let animationId
 let score = 0;
