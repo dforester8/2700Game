@@ -120,7 +120,6 @@ const x = canvas.width / 2
 const y = canvas.height / 2
 
 let jacket = new Jacket(x, y, 'space');
-//jacket.draw();
 let stingers = [];
 let enemies = [];
 
@@ -143,7 +142,6 @@ function randomEnemy() {
 		x = Math.random() * canvas.width
 		y = (Math.random() < 0.5) ? 0 - 30 : canvas.height + 30
 	}
-		console.log('x ' + x + ', y ' + y)
 		const angle = Math.atan2(canvas.height / 2 - y, canvas.width / 2 - x);
 		const velocity = {
 		x: Math.cos(angle),
