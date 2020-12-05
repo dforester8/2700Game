@@ -11,10 +11,9 @@ const modalEl = document.querySelector('#modalEl');
 const endScoreEl = document.querySelector('#endScoreEl');
 
 class Jacket {
-	constructor(x,y,direction) {
+	constructor(x,y) {
 		this.x = x;
 		this.y = y;
-		this.direction = direction;
 	}
 		draw() {
 		var ctx = document.getElementById('canvas').getContext('2d');
@@ -119,12 +118,12 @@ class Bulldog extends Enemy {
 const x = canvas.width / 2
 const y = canvas.height / 2
 
-let jacket = new Jacket(x, y, 'space');
+let jacket = new Jacket(x, y);
 let stingers = [];
 let enemies = [];
 
 function init() {
-	jacket = new Jacket(x, y, 'space');
+	jacket = new Jacket(x, y);
  	stingers = [];
  	enemies = [];
  	score = 0;
